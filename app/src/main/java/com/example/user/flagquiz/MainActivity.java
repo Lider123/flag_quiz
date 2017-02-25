@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String REGIONS = "pref_regionsToInclude";
 
     private boolean phoneDevice = true;
-    private boolean preferencesChanged = true;
+    public boolean preferencesChanged = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

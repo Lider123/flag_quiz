@@ -220,7 +220,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void loadNextFlag() {
-        String nextImage = fileNameList.remove(0);
+        String nextImage = fileNameList.remove(random.nextInt(fileNameList.size()));
         correctAnswer = nextImage;
         answerTextView.setText("");
 
@@ -244,8 +244,8 @@ public class MainActivityFragment extends Fragment {
 
         Collections.shuffle(fileNameList);
 
-        int correct = fileNameList.indexOf(correctAnswer);
-        fileNameList.add(fileNameList.remove(correct));
+        //int correct = fileNameList.indexOf(correctAnswer);
+        fileNameList.add(correctAnswer);
 
         for (int row = 0; row < guessRows; row++) {
             for (int column = 0; column < guessLinearLayouts[row].getChildCount(); column++) {
